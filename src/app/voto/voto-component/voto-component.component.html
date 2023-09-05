@@ -1,0 +1,22 @@
+<div *ngIf="currentVotante">
+  <p>Usuario actual:</p>
+  <p>Nombre: {{ currentVotante.name }}</p>
+  <p>Apellido: {{ currentVotante.lastName }}</p>
+  <p>Cédula: {{ currentVotante.cedula }}</p>
+  <p>Email: {{ currentVotante.email }}</p>
+</div>
+
+<div fxLayout="row wrap" fxLayoutAlign="start start" class="container">
+  <mat-card *ngFor="let candidato of candidatos" class="example-card">
+    <mat-card-title>{{ candidato.name }}</mat-card-title>
+    <mat-card-subtitle>{{ candidato.lastName }}</mat-card-subtitle>
+    <img mat-card-image [src]="getImagenUrl(candidato.imagenUrl)" alt="image" class="mat-card-image">
+    <mat-card-content>
+      <p></p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Votar</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+  

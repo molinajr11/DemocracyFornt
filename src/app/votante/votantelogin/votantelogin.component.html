@@ -1,0 +1,11 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+    <h2>Iniciar Sesión</h2>
+  </div>
+  
+<div>
+  <mat-form-field class="example-full-width">
+    <mat-label>Cedula</mat-label>
+    <input matInput type="number" [(ngModel)]="cedula">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="login()">Iniciar Sesión</button>
+</div>

@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Alinear las tarjetas en la misma altura */
+  margin: 30px; /* Agregar margen al contenedor */
+  
+}
+.example-card {
+  max-width: 200px;
+  height: 400px;
+  margin-bottom: 40px;
+  background-color: #f0f0f0; /* Color de fondo para cada tarjeta */
+  border: 5px solid #ccc; /* Borde para resaltar la tarjeta */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno para separar el contenido */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para resaltar la tarjeta */
+  margin-right: 20px;
+  margin-top: 0px;
+  }
+
+.mat-card-image {
+    width: 80%; /* El ancho será la mitad del contenedor */
+    height: 90%; /* La altura se ajustará automáticamente para mantener la proporción */
+    object-fit: cover;
+    margin: 0 auto;
+  }

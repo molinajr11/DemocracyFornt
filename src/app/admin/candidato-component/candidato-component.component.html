@@ -1,0 +1,26 @@
+<!-- HTML -->
+<div fxLayoutAlign="center center" class="formulario">
+  <label class="formulario-title">Ingrese los datos del candidato</label>
+</div>
+
+<div fxLayout="column" fxLayoutAlign="center center" class="formulario">
+  <div class="form-group">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" placeholder="Digite el nombre del candidato" [(ngModel)]="name" class="form-control">
+  </div>
+  
+  <div class="form-group">
+    <label for="lastname">Apellido:</label>
+    <input type="text" id="lastname"  placeholder=" Digite el Apellido" [(ngModel)]="lastname" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="foto">Foto:</label>
+    <input type="file" id="foto" (change)="onFileSelected($event)" class="form-control">
+  </div>
+  
+  <button (click)="addCandidatos()" class="btn btn-primary">Agregar Candidato</button>
+</div>
+
+
+
