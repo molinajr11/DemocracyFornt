@@ -1,11 +1,29 @@
-<div fxLayout="column" fxLayoutAlign="center center">
-    <h2>Iniciar Sesión</h2>
-  </div>
-  
-<div>
-  <mat-form-field class="example-full-width">
-    <mat-label>Cedula</mat-label>
-    <input matInput type="number" [(ngModel)]="cedula">
-  </mat-form-field>
-  <button mat-raised-button color="primary" (click)="login()">Iniciar Sesión</button>
+<div class="login-container" fxLayout="column" fxLayoutAlign="center center">
+  <h2>Iniciar Sesión</h2>
 </div>
+
+<div class="login">
+  <div class="webcam-container">
+    <webcam
+      [trigger]="triggerObservable"
+      [allowCameraSwitch]="allowCameraSwitch"
+      (imageCapture)="handleImage($event)"
+    ></webcam>
+    <button class="capture-button" mat-raised-button color="primary" (click)="captureImage();">Capturar Imagen</button>
+  </div>
+
+  <div class="cedula-container">
+    <mat-form-field class="example-full-width">
+      <mat-label>Cedula</mat-label>
+      <input matInput type="number" [(ngModel)]="cedula">
+    </mat-form-field>
+    <button class="capture-button" mat-raised-button color="primary" (click)="captureCedula();">Capturar Cédula</button>
+  </div>
+
+  <div class="login-button-container">
+    <button class="login-button" mat-raised-button color="primary" (click)="login();">Iniciar Sesión</button>
+  </div>
+</div>
+
+
+

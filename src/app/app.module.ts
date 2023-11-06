@@ -16,6 +16,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { CandidatoComponentComponent } from './admin/candidato-component/candidato-component.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LoginAdminComponent } from './admin/login-admin/login-admin.component';
+import { WebcamModule } from 'ngx-webcam';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +39,7 @@ import { LoginAdminComponent } from './admin/login-admin/login-admin.component';
     MatIconModule,
     FormsModule,
     FlexLayoutModule,
+    WebcamModule
   ],
   providers: [],
   bootstrap: [AppComponent]

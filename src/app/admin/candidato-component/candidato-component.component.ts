@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CandidatoServiceService } from '../candidato-service.service';
+import CandidatoServiceService from '../Admin-service.service';
 import { Candidatos } from 'src/app/Modelos/candidatos';
 import { saveAs } from 'file-saver';
 
